@@ -1,0 +1,68 @@
+EPISODE 6. DEMONS
+
+daemon - processes , instance of a running program.
+
+NEW COMMAND TIME 
+ps -aux
+ps -aux | grep sublime 
+
+nano daemons 
+------------------------------------------------------
+
+daemonsbackground processes we didnt start them A.K.A services 
+
+networjing 
+printing
+ssh 
+sshd
+------------------------------------------------------
+┌─[us-academy-3]─[10.10.14.93]─[htb-ac-880114@htb-hyhozw9mov]─[~]
+└──╼ [★]$  ps -aux | grep ssh
+root        2191  0.0  0.0  13464  7640 ?        Ss   05:48   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+htb-ac-+    2349  0.0  0.0   6028   468 ?        Ss   05:48   0:00 /usr/bin/ssh-agent x-session-manager
+htb-ac-+    2989  0.0  0.0   6316   644 pts/1    R+   06:00   0:00 grep --color=auto ssh
+┌─[us-academy-3]─[10.10.14.93]─[htb-ac-880114@htb-hyhozw9mov]─[~]
+└──╼ [★]$ 
+
+--------------------------------------------------------------------
+ps -aux | grep ssh 
+ps -aux | grep ntp
+-------------------------------------------------------
+systemd 
+master daemon boss of the daemons 
+
+
+systemd service manager initialization system init boot kernel systemd mounting file system starting all services 
+---------------------------------------------------------------------------
+sudo systemctl start sshd 
+systemctl stop sshd
+sudo systemctl restar sshd
+sudo systemctl reload sshd 
+
+sudo systemctl reload-or-restart sshd 
+---------------------------------------------------------------------------
+sudo systemctl status ntp 
+sudo systemctl disable ntp 
+sudo systemctl enable ntp 
+sudo systemctl is-active ntp 
+sudo systemctl is-active enable ntp 
+sudo systemctl list-units 
+$ sudo systemctl list-units -t service 
+---------------------------------------------------------------------
+sudo systemctl list-units |grep nginx 
+sudo systemctl list-units --all |grep nginx 
+sudo systemctl list-unit-files | grep nginx 
+sudo systemctl status nginx 
+---------------------------------------------------------------------
+
+start on boot start nginx:
+sudo systemctl enable nginx 
+sudo systemctl is-enable nginx 
+sudo journalctl -xe
+
+sudo systemctl list-units | grep jorunal 
+sudo jorunalctl -xe 
+
+
+end of episode
+extended video  https://ntck.co/37nJoeP

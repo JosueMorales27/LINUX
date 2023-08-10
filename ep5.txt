@@ -1,0 +1,52 @@
+how install programs. (package).
+
+
+Package manager:
+
+low-level package manager (dpkg) 
+apt (advanced package tool)
+-----------------------------------------------------
+
+
+sudo dpkg -i discord-0.0.28.deb 
+sudo apt -fix-broken install 
+
+
+
+
+sudo apt update install pidgin 
+
+------------------------------------------------------
+ 
+repository storage location (collection of software)
+
+apt update to check the repository 
+apt install to download 
+
+----------------------------------------------------
+
+sudo apt edit-sources
+cat /etc/apt/sources.list.d/parrot.list
+sudo nano /etc/apt/sources.list.d/parrot.list
+-------------------------------------------------
+
+
+sudo apt list  
+apt list --installed
+
+sudo apt remove pidgin 
+sudo apt purge discord
+sudo apt purge discord-data 
+
+ sudo apt update && sudo apt upgrade  
+sudo apt update && sudo apt full-upgrade 
+------------------------------------------------
+
+ sudo apt install snap
+
+sudo snap install --classic code
+-----------------------------------------------
+
+git clone https://github.com/fleetcaptain/Turbolist3r
+pip3 install -r requirements.txt 
+PYTHON3 TURBOLIST3R.PY -D HACKTHEBOX.EU
