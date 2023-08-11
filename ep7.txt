@@ -1,0 +1,12 @@
+ps --help 
+ps --help simple 
+ps -aux
+top 
+htop 
+---------------------------------
+tyypes processes : foreground and background 
+
+foregroundprocces example: ping -c 100 networkchuck.com 
+ctel + c to stopp proccess 
+ 
+sleep 30
